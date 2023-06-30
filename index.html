@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fyers Trading App</title>
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdn.socket.io/4.5.0/socket.io.min.js"
+      integrity="sha384-7EyYLQZgWBi67fBtVxw60/OWl1kjsfrPFcaU0pp0nAh+i8FD068QogUvg85Ewy1k"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="mainBody">
+      <div class="first">
+        <header id="header">
+          <ul id="notification"></ul>
+        </header>
+      </div>
+      <div class="second">
+        <div class="scriptName" id="barName">Script I</div>
+        <div class="w3-light-grey">
+          <div
+            class="w3-container w3-center"
+            style="width: 1%"
+            id="barGraph"
+          ></div>
+          <!-- w3-green -->
+        </div>
+        <div class="scriptName" id="barName">Script II</div>
+        <div class="w3-light-grey">
+          <div
+            class="w3-container w3-center"
+            style="width: 1%"
+            id="barGraph"
+          ></div>
+          <!-- w3-green -->
+        </div>
+        <div class="scriptName" id="barName">Script III</div>
+        <div class="w3-light-grey">
+          <div
+            class="w3-container w3-center"
+            style="width: 1%"
+            id="barGraph"
+          ></div>
+          <!-- w3-green -->
+        </div>
+        <div class="scriptName" id="barName">Script IV</div>
+        <div class="w3-light-grey">
+          <div
+            class="w3-container w3-center"
+            style="width: 1%"
+            id="barGraph"
+          ></div>
+          <!-- w3-green -->
+        </div>
+      </div>
+
+      <!-- accordian -->
+      <div class="third">
+        <form class="container">
+          <button class="accordion" id="panelAuth">Send Auth Data</button>
+          <div class="panel" >
+            <div id="tokenS">
+              <textarea
+                rows="5"
+                width="100%"
+                name="message"
+                id="message"
+                placeholder="Enter your Token..."
+              ></textarea>
+              <button id="sendAuthButton">SEND Auth</button>
+            </div>
+          </div>
+
+          <button class="accordion" id="panelScripts">Enter Selected Scripts</button>
+          <div class="panel" >
+            <div id="scrips">
+              <input
+                width="100%"
+                name="message"
+                id="scrip1"
+                placeholder="Enter Script 1..."
+              />
+              <input
+                width="100%"
+                name="message"
+                id="scrip2"
+                placeholder="Enter Script 2..."
+              />
+              <input
+                width="100%"
+                name="message"
+                id="scrip3"
+                placeholder="Enter Script 3..."
+              />
+              <input
+                width="100%"
+                name="message"
+                id="scrip4"
+                placeholder="Enter Script 4..."
+              />
+              <button id="buttonScrip">SEND Scripts</button>
+            </div>
+          </div>
+
+          <button class="accordion" id="panelStartBot">Start My Bot</button>
+          <div class="panel" >
+            <button id="startBotButton">Start My Bot</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="./script.js" type="module"></script>
+    <script src="./accordian.js" type="module"></script>
+
+    <script src="/socket.io/socket.io.js"></script>
+  </body>
+</html>
