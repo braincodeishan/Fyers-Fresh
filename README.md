@@ -35,13 +35,13 @@ To install and run the Trading Robot App, follow these steps:
    npm install
    ```
 
-3. Configure API keys: Obtain API keys from your preferred financial data (Here Fyers) provider and update the configuration file (`config.js`) with the relevant keys.
+3. Configure API keys: Obtain API keys from your preferred financial data (Here Fyers) provider and update the configuration file (`right side of HTML file`) with the relevant keys.
 
 4. Set up your preferred trading parameters in the Frontend File
 
 5. Run the application:
    ```
-   node app.js
+   node index.js
    ```
 
 6. Access the application through your web browser by navigating to `http://localhost:8080`.
