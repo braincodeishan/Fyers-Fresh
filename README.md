@@ -64,7 +64,7 @@ To install and run the Trading Robot App, follow these steps:
 
 ## Support
 
-For any issues, questions, or suggestions regarding the Trading Robot App, please contact our support team at support@tradingrobotapp.com.
+For any issues, questions, or suggestions regarding the Trading Robot App, please contact our support team at braincodeishan@gmail.com.
 
 ## License
 
