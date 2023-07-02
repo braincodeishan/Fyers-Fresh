@@ -8,7 +8,11 @@ const barGraph = document.querySelector("#barGraph");
 const scrips = document.querySelector("#scrips");
 const panelAuth = document.querySelector("#panelAuth");
 const panelScripts = document.querySelector("#panelScripts");
-
+const buttonScript=document.querySelector("#buttonScript");
+const script1=document.querySelector("#script1");
+const script2=document.querySelector("#script2");
+const script3=document.querySelector("#script3");
+const script4=document.querySelector("#script4");
 
 const socket = io("http://localhost:8080");
 
@@ -17,6 +21,12 @@ const socket = io("http://localhost:8080");
 function printMessage(e) {
   e.preventDefault();
   socket.emit("token", message.value);
+}
+
+function sendScripts(e){
+  e.preventDefault();
+  socket.emit("scripts",script1.value,script2.value,script3.value,script4.value)
+  
 }
 
 
@@ -68,6 +78,7 @@ startBotButton.addEventListener("click", (e) => {
   socket.emit("start", "");
 });
 
+buttonScript.addEventListener("click",sendScripts)
 
 
 

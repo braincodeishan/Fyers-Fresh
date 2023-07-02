@@ -143,6 +143,16 @@ socketIO.on("connection", (socket) => {
     }
   });
 
+  socket.on("scripts",async(script1,script2,script3,script4)=>{
+    script[0].name="NSE:"+script1+"-EQ";
+    script[1].name="NSE:"+script2+"-EQ";
+    script[2].name="NSE:"+script3+"-EQ";
+    script[3].name="NSE:"+script4+"-EQ";
+
+    socket.emit("AuthTokenSaved","All the Scripts are saved for trading")
+  })
+
+
   function logger(data) {
     socket.emit("log", data);
   }
